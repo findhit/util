@@ -1,0 +1,46 @@
+{
+  "name": "findhit-util",
+  "description": "general propose utils for javascript",
+  "version": "0.0.1",
+  "author": "José Moreira <jose.moreira@findhit.com>",
+  "contributors": [
+    {
+      "name": "José Moreira",
+      "email": "jose.moreira@findhit.com"
+    },
+    {
+      "name": "Bruno Casanova",
+      "email": "bruno.casanova@findhit.com"
+    },
+    {
+      "name": "Gabriel Conceição",
+      "email": "gabriel.conceicao@findhit.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/findhit/findhit-util.git"
+  },
+  "bugs": {
+    "url": "https://github.com/findhit/findhit-util/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.21.3",
+    "sinon": "^1.10.3"
+  },
+  "keywords": [
+    "util",
+    "framework",
+    "extender",
+    "extend",
+    "nodejs"
+  ],
+  "main": "index",
+  "scripts": {},
+  "engines": {
+    "node": ">=0.8"
+  },
+  "license": "GPL v3"
+}
