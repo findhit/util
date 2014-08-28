@@ -60,6 +60,43 @@ describe( "Util", function () {
 
 		});
 
+		describe( "filter", function () {
+
+			it( "array - get all pair numbers", function () {
+				var t, a = [
+						1, 2, 3,
+						4, 5, 6,
+						7, 8, 9,
+					];
+
+				t = Util.filter( a, function ( num ) { return num % 2 == 0; });
+
+				expect( t ).to.have.length( 4 );
+
+				expect( t[0] ).to.be.equal( 2 );
+				expect( t[1] ).to.be.equal( 4 );
+				expect( t[2] ).to.be.equal( 6 );
+				expect( t[3] ).to.be.equal( 8 );
+
+			});
+
+			it( "object - get values with letter 'a'", function () {
+				var t, a = {
+						foo: 'bar',
+						bar: 'disco'
+					};
+
+				t = Util.filter( a, function ( value ) { return value.match(/a/); });
+
+				expect( Object.keys( t ) ).to.have.length( 1 );
+
+				expect( t.foo ).to.be.equal( 'bar' );
+				expect( t.bar ).to.not.be.ok;
+
+			});
+
+		});
+
 	});
 
 });
