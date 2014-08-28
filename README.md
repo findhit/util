@@ -1,7 +1,7 @@
 findhit-util
 ============
 
-general propose utils for javascript
+general propose utils for javascript, to score on top of underscore!
 
 Used on multiple libraries, no one want to reinvent the wheel everytime we need it.
 
