@@ -80,4 +80,7 @@ var bool = Util.from.String( 'true' ); // returns (bool) true
 
 // Convert to a variable to a specific type
 
+var json = Util.to.String( { foo: 'bar' } ); // returns (string) '{"foo":"bar"}'
+
+
 ```
