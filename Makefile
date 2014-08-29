@@ -15,4 +15,4 @@ test-mocha:
 	$(eval TESTS := $(shell find $(PATH_TEST)/* -name "*.test.js"))
 
 	@echo "Running tests..."
-	@mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter $(REPORTER) $(TESTS);
+	@./node_modules/mocha/bin/mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter $(REPORTER) $(TESTS);
