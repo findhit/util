@@ -60,6 +60,8 @@ if( Util.isnt.function( callback ) ) {
 
 */
 
+```
+
 ### From
 
 ```js
