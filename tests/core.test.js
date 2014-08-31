@@ -97,6 +97,195 @@ describe( "Util", function () {
 
 		});
 
+		describe( "slice", function () {
+
+			describe( "array", function () {
+
+				it( "from second element to the end", function () {
+					var t, a = [
+							'a',
+							'b',
+							'c',
+						];
+
+					t = Util.slice( a, 1 );
+
+					expect( Util.is.Array( t ) ).to.be.ok;
+					expect( t ).to.have.length( 2 );
+					expect( t[0] ).to.be.equal( 'b' );
+					expect( t[1] ).to.be.equal( 'c' );
+
+				});
+
+
+				it( "from second element to third", function () {
+					var t, a = [
+							'a',
+							'b',
+							'c',
+						];
+
+					t = Util.slice( a, 1, 2 );
+
+					expect( Util.is.Array( t ) ).to.be.ok;
+					expect( t ).to.have.length( 1 );
+					expect( t[0] ).to.be.equal( 'b' );
+
+				});
+
+				it( "from last two to the end", function () {
+					var t, a = [
+							'a',
+							'b',
+							'c',
+						];
+
+					t = Util.slice( a, -2 );
+
+					expect( Util.is.Array( t ) ).to.be.ok;
+					expect( t ).to.have.length( 2 );
+					expect( t[0] ).to.be.equal( 'b' );
+					expect( t[1] ).to.be.equal( 'c' );
+
+				});
+
+				it( "from last two except last one", function () {
+					var t, a = [
+							'a',
+							'b',
+							'c',
+						];
+
+					t = Util.slice( a, -2, -1 );
+
+					expect( Util.is.Array( t ) ).to.be.ok;
+					expect( t ).to.have.length( 1 );
+					expect( t[0] ).to.be.equal( 'b' );
+
+				});
+
+			});
+
+			describe( "string", function () {
+
+				it( "from second element to the end", function () {
+					var t, a = 'abc';
+
+					t = Util.slice( a, 1 );
+
+					expect( Util.is.String( t ) ).to.be.ok;
+					expect( t ).to.have.length( 2 );
+					expect( t[0] ).to.be.equal( 'b' );
+					expect( t[1] ).to.be.equal( 'c' );
+
+				});
+
+
+				it( "from second element to third", function () {
+					var t, a = 'abc';
+
+					t = Util.slice( a, 1, 2 );
+
+					expect( Util.is.String( t ) ).to.be.ok;
+					expect( t ).to.have.length( 1 );
+					expect( t[0] ).to.be.equal( 'b' );
+
+				});
+
+				it( "from last two to the end", function () {
+					var t, a = 'abc';
+
+					t = Util.slice( a, -2 );
+
+					expect( Util.is.String( t ) ).to.be.ok;
+					expect( t ).to.have.length( 2 );
+					expect( t[0] ).to.be.equal( 'b' );
+					expect( t[1] ).to.be.equal( 'c' );
+
+				});
+
+				it( "from last two except last one", function () {
+					var t, a = 'abc';
+
+					t = Util.slice( a, -2, -1 );
+
+					expect( Util.is.String( t ) ).to.be.ok;
+					expect( t ).to.have.length( 1 );
+					expect( t[0] ).to.be.equal( 'b' );
+
+				});
+
+			});
+
+			describe( "object", function () {
+
+				it( "from second element to the end", function () {
+					var t, a = {
+						first: 'a',
+						second: 'b',
+						third: 'c',
+					};
+
+					t = Util.slice( a, 1 );
+
+					expect( Util.is.Object( t ) ).to.be.ok;
+					expect( Object.keys( t ) ).to.have.length( 2 );
+					expect( t.second ).to.be.equal( 'b' );
+					expect( t.third ).to.be.equal( 'c' );
+
+				});
+
+
+				it( "from second element to third", function () {
+					var t, a = {
+						first: 'a',
+						second: 'b',
+						third: 'c',
+					};
+
+					t = Util.slice( a, 1, 2 );
+
+					expect( Util.is.Object( t ) ).to.be.ok;
+					expect( Object.keys( t ) ).to.have.length( 1 );
+					expect( t.second ).to.be.equal( 'b' );
+
+				});
+
+				it( "from last two to the end", function () {
+					var t, a = {
+						first: 'a',
+						second: 'b',
+						third: 'c',
+					};
+
+					t = Util.slice( a, -2 );
+
+					expect( Util.is.Object( t ) ).to.be.ok;
+					expect( Object.keys( t ) ).to.have.length( 2 );
+					expect( t.second ).to.be.equal( 'b' );
+					expect( t.third ).to.be.equal( 'c' );
+
+				});
+
+				it( "from last two except last one", function () {
+					var t, a = {
+						first: 'a',
+						second: 'b',
+						third: 'c',
+					};
+
+					t = Util.slice( a, -2, -1 );
+
+					expect( Util.is.Object( t ) ).to.be.ok;
+					expect( Object.keys( t ) ).to.have.length( 1 );
+					expect( t.second ).to.be.equal( 'b' );
+
+				});
+
+			});
+
+		});
+
 	});
 
 });
