@@ -8,7 +8,7 @@ Used on multiple libraries, no one want to reinvent the wheel everytime we need 
 ## Instalation
 
 ```bash
-npm install findhit/findhit-util --save
+npm install findhit-util --save
 ```
 
 ## Usage
