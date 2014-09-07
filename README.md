@@ -17,70 +17,111 @@ npm install findhit-util --save
 
 var Util = require('findhit-util');
 
-```
+// IsIsnt - Type validation
 
-### Core
-```
+	// Is
 
-var id = Util.uniqId();
+		Util.is.instanceof( Promise, variable );
 
-Util.forEach( obj, function ( key ) {
-	// ...
-});
+		// Default registered Classes
 
-Util.map( obj, function ( key ) {
-	// return ...
-});
+		Util.is.Function( variable );
+		Util.is.Object( variable );
+		Util.is.Array( variable );
+		Util.is.String( variable );
+		Util.is.Error( variable );
+		Util.is.Number( variable );
 
-```
+	// Isnt
 
-### Is / Isn't
+		Util.isnt.instanceof( Promise, promise );
 
-```js
+		// Default registered Classes
 
-// Fast variable checks
+		Util.isnt.Function( variable );
+		Util.isnt.Object( variable );
+		Util.isnt.Array( variable );
+		Util.isnt.String( variable );
+		Util.isnt.Error( variable );
+		Util.isnt.Number( variable );
 
-if( Util.is.function( callback ) ) {
-	// ...
-}
+	// Custom registers
+	// This is great, not just to use on your app, but to be used also by who uses your app
 
-if( Util.isnt.function( callback ) ) {
-	// throw new Error
-}
+		// We use on `findhit-promise` this lib, and we have registered it on IsIsnt like this:
+		Util.isisnt.register( Promise, [ 'Promise', 'promise' ] );
 
-/*
+		// Now, if someone uses `findhit-promise` and also `findhit-util` can check without
+		// having to register it again!! :)
 
-	We also support other checks like:
+		Util.is.Promise( myAwesomePromiseInstance )
 
-	- Util.is.array
-	- Util.is.object
-	- Util.is.error
-	- Util.is.string
-	- Util.is.number // Util.is.numeric
+		// We have added also a custom register that accepts one or two functions for evaluation
 
-*/
+			// Util.isisnt.registerCustom( keys, isFn, [ isntFn ] );
 
-```
+			// You could bind it to one key
+			Util.isisnt.registerCustom( 'even', function ( variable ) {
+				return Util.is.Number( variable ) && num % 2;
+			});
 
-### From
+			// or bind it to multiple
+			Util.isisnt.registerCustom( [ 'Odd', 'odd' ], function ( variable ) {
+				return Util.is.Number( variable ) && ! num % 2;
+			});
 
-```js
+				// This would make available:
+				Util.is.even( 2 ) // true
+				Util.isnt.even( 2 ) // false
+				Util.is.even( 3 ) // false
+				Util.isnt.even( 3 ) // true
 
-// Parse from a variable type to the most probably type
+				Util.is.odd( 2 ) // false
+				Util.isnt.odd( 2 ) // true
+				Util.is.Odd( 3 ) // true
+				Util.isnt.Odd( 3 ) // false
 
-var obj = Util.from.String( '{"foo":"bar"}' ); // returns (object) { foo: 'bar' }
+			// if isnt evaluation is different than is, you could supply isnt function
+			Util.isisnt.registerCustom(
+				'coolest',
+				function ( variable ) {
+					return variable === 'cuss';
+				},
+				function ( variable ) {
+					return variable === 'cuss' ? 'how do you dare?' : false; // should return bool, this is just for POC
+				}
+			);
 
-var bool = Util.from.String( 'true' ); // returns (bool) true
+// By Type
 
-```
+	// String utils
+		// Util.string OR Util.String
 
-### To
+		// is / isnt binds
+		Util.String.is( variable )
+		Util.String.isnt( variable )
 
-```js
+		Util.String.trim( variable )
+		Util.String.splitWords( variable )
 
-// Convert to a variable to a specific type
+	// Function utils
+		// Util.function OR Util.Function
 
-var json = Util.to.String( { foo: 'bar' } ); // returns (string) '{"foo":"bar"}'
+		// is / isnt binds
+		Util.Function.is( variable )
+		Util.Function.isnt( variable )
 
+		Util.Function.return( value ) // Returns a function that returns the value on each execution
+
+		Util.Function.falsify() // false
+		Util.Function.truthify() // true
+		Util.Function.nullify() // null
+		Util.Function.undefinify() // undefined
+
+		// get function parameter names
+		Util.Function.getParamNames('function ( a, b, c )') // [ 'a', 'b', 'c' ]
+		Util.Function.getParamNames( function ( a, b, c ) {}) // [ 'a', 'b', 'c' ]
+		Util.Function.getParamNames('function ( a, /* b, */ c )') // [ 'a', 'c' ]
+		Util.Function.getParamNames( function ( a, /* b, */ c ) {}) // [ 'a', 'c' ]
 
 ```
