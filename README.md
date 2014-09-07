@@ -17,6 +17,21 @@ npm install findhit-util --save
 
 var Util = require('findhit-util');
 
+// Everyday use
+	
+	Util.uniqId()
+	Util.uuid()
+
+	Util.extend()
+	Util.clone()
+	Util.each() <- Util.forEach()
+	Util.map()
+	Util.filter()
+	Util.slice()
+	Util.splice()
+
+	Util.log() // same as console.log()
+
 // IsIsnt - Type validation
 
 	// Is
@@ -111,6 +126,10 @@ var Util = require('findhit-util');
 		Util.Function.is( variable )
 		Util.Function.isnt( variable )
 
+		// Analysis
+		Util.Function.debug( 'hello', 'petit', 'de', 'moiselle' ) // logs all arguments into console.log;
+
+		// Return returners
 		Util.Function.return( value ) // Returns a function that returns the value on each execution
 
 		Util.Function.falsify() // false
