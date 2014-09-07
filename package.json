@@ -1,7 +1,7 @@
 {
   "name": "findhit-util",
   "description": "general propose utils for javascript",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "José Moreira <jose.moreira@findhit.com>",
   "contributors": [
     {
