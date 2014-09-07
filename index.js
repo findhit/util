@@ -18,10 +18,14 @@
 var Util = {};
 
 require('./lib/core')( Util );
-require('./lib/function')( Util );
-require('./lib/is-isnt')( Util );
+require('./lib/isisnt')( Util );
 require('./lib/from')( Util );
 require('./lib/to')( Util );
+
+// Load utils by type
+
+require('./lib/type/function')( Util );
+require('./lib/type/string')( Util );
 
 // Export it
 module.exports = Util;
