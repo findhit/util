@@ -1,9 +1,9 @@
 findhit-util
 ============
 
-general propose utils for javascript, to score on top of underscore!
+Util is a library of daily-needed utils for javascript developers.
 
-Used on multiple libraries, no one want to reinvent the wheel everytime we need it.
+Used on our own libraries, and maybe on yours, no one wants to reinvent the wheel everytime they need it.
 
 ## Instalation
 
