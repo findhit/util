@@ -5,13 +5,17 @@ Util is a library of daily-needed utils for javascript developers.
 
 Used on our own libraries, and maybe on yours, no one wants to reinvent the wheel everytime they need it.
 
-## Instalation
+Instalation
+-----------
 
 ```bash
-npm install findhit-util --save
+
+	npm install findhit-util --save
+
 ```
 
-## Usage
+Usage
+-----
 
 ```js
 
@@ -47,6 +51,11 @@ var Util = require('findhit-util');
 		Util.is.Error( variable );
 		Util.is.Number( variable );
 
+		Util.is.true( variable );
+		Util.is.false( variable );
+		Util.is.undefined( variable );
+		Util.is.null( variable );
+
 	// Isnt
 
 		Util.isnt.instanceof( Promise, promise );
@@ -59,6 +68,11 @@ var Util = require('findhit-util');
 		Util.isnt.String( variable );
 		Util.isnt.Error( variable );
 		Util.isnt.Number( variable );
+
+		Util.isnt.true( variable );
+		Util.isnt.false( variable );
+		Util.isnt.undefined( variable );
+		Util.isnt.null( variable );
 
 	// Custom registers
 	// This is great, not just to use on your app, but to be used also by who uses your app
