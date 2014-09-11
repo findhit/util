@@ -23,8 +23,9 @@ require('./lib/from')( Util );
 require('./lib/to')( Util );
 
 // Load utils by type
-
+require('./lib/type/array')( Util );
 require('./lib/type/function')( Util );
+require('./lib/type/object')( Util );
 require('./lib/type/string')( Util );
 
 // Export it

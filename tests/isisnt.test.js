@@ -187,6 +187,7 @@ describe( "Util", function () {
 			});
 
 		});
+
 	});
 
 });

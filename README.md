@@ -28,11 +28,18 @@ var Util = require('findhit-util');
 
 	Util.extend()
 	Util.clone()
-	Util.each() <- Util.forEach()
-	Util.map()
 	Util.filter()
 	Util.slice()
 	Util.splice()
+
+	// Dynamic methods (that calls inner ones)
+
+		Util.each() <- Util.forEach()
+			* Util.Array.each() <- Util.Array.forEach()
+			* Util.Object.each() <- Util.Object.forEach()
+		Util.map()
+			* Util.Array.map()
+			* Util.Object.map()
 
 	Util.log() // same as console.log()
 
@@ -123,6 +130,16 @@ var Util = require('findhit-util');
 
 // By Type
 
+	// Array utils
+		// Util.array OR Util.Array
+
+		// is / isnt binds
+		Util.Array.is( variable )
+		Util.Array.isnt( variable )
+
+		Util.Array.each() <- Util.Array.forEach()
+		Util.Array.map()
+
 	// String utils
 		// Util.string OR Util.String
 
@@ -132,6 +149,23 @@ var Util = require('findhit-util');
 
 		Util.String.trim( variable )
 		Util.String.splitWords( variable )
+
+		// Case conversions
+
+			// from CamelCase to ...
+			Util.String.fromCamelToUnderscore( 'HeyYo' ) // 'hey_yo'
+			Util.String.fromCamelToDash( 'HeyYo' ) // 'hey-yo'
+			Util.String.fromCamelToSpaced( 'HeyYo' ) // 'Hey Yo'
+
+			// from underscore_case to ...
+			Util.String.fromUnderscoreToCamel( 'hey_yo' ) // 'HeyYo'
+			Util.String.fromUnderscoreToDash( 'hey_yo' ) // 'hey-yo'
+			Util.String.fromUnderscoreToSpaced( 'hey_yo' ) // 'Hey Yo'
+
+			// from dash-case to ...
+			Util.String.fromDashToCamel( 'hey-yo' ) // 'HeyYo'
+			Util.String.fromDashToUnderscore( 'hey-yo' ) // 'hey_yo'
+			Util.String.fromDashToSpaced( 'hey-yo' ) // 'Hey Yo'
 
 	// Function utils
 		// Util.function OR Util.Function
@@ -156,5 +190,15 @@ var Util = require('findhit-util');
 		Util.Function.getParamNames( function ( a, b, c ) {}) // [ 'a', 'b', 'c' ]
 		Util.Function.getParamNames('function ( a, /* b, */ c )') // [ 'a', 'c' ]
 		Util.Function.getParamNames( function ( a, /* b, */ c ) {}) // [ 'a', 'c' ]
+
+	// Object utils
+		// Util.object OR Util.Object
+
+		// is / isnt binds
+		Util.Object.is( variable )
+		Util.Object.isnt( variable )
+
+		Util.Object.each() <- Util.Object.forEach()
+		Util.Object.map()
 
 ```
