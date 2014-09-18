@@ -148,6 +148,8 @@ var Util = require('findhit-util');
 
 		Util.String.trim( variable )
 		Util.String.splitWords( variable )
+		Util.String.capitalize( 'heyyo' ) // Heyyo
+		Util.String.decapitalize( 'Heyyo' ) // heyyo
 
 		// Case conversions
 
