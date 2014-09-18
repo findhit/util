@@ -48,6 +48,22 @@ describe( "Util", function () {
 
 			});
 
+			describe( ".capitalize", function () {
+
+				it( "should capitalize the string", function () {
+					var str = Util.String.capitalize( 'heyyo' );
+					expect( str ).to.equal( 'Heyyo' );
+				});
+			});
+
+			describe( ".decapitalize", function () {
+
+				it( "should decapitalize the string", function () {
+					var str = Util.String.decapitalize( 'Heyyo' );
+					expect( str ).to.equal( 'heyyo' );
+				});
+			});
+
 			describe( "Case conversions", function () {
 
 				describe('from CamelCase to ...', function () {
