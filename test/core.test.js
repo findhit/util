@@ -42,20 +42,20 @@ describe( "Util", function () {
 
 		describe( "map", function () {
 
-			it( "get 3rd value of each array on array", function () {
-				var t, a = [
-						[ 1, 2, 3 ],
-						[ 4, 5, 6 ],
-						[ 7, 8, 9 ],
-					];
+			it( "should return an array when array is given", function () {
+				var t, a = [];
 
-				t = Util.map( a, function ( v ) { return v[ 2 ] });
+				t = Util.map( a, function ( v ) { return v });
 
-				expect( t ).to.have.length( 3 );
-				expect( t[0] ).to.be.equal( 3 );
-				expect( t[1] ).to.be.equal( 6 );
-				expect( t[2] ).to.be.equal( 9 );
+				expect( Util.is.Array( t ) ).to.be.ok;
+			});
 
+			it( "should return an object when object is given", function () {
+				var t, a = {};
+
+				t = Util.map( a, function ( v ) { return v });
+
+				expect( Util.is.Object( t ) ).to.be.ok;
 			});
 
 		});
@@ -88,9 +88,9 @@ describe( "Util", function () {
 
 				t = Util.filter( a, function ( value ) { return value.match(/a/); });
 
-				expect( Object.keys( t ) ).to.have.length( 1 );
-
-				expect( t.foo ).to.be.equal( 'bar' );
+				expect( t ).to.deep.equal({
+					foo: 'bar'
+				});
 				expect( t.bar ).to.not.be.ok;
 
 			});

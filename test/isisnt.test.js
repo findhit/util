@@ -49,6 +49,7 @@ describe( "Util", function () {
 			it( "is", function () {
 
 				expect( Util.is.object( {} ) ).to.be.ok
+				expect( Util.is.object( [] ) ).to.not.be.ok
 				expect( Util.is.object( 'ola' ) ).to.not.be.ok
 
 			});
@@ -56,6 +57,7 @@ describe( "Util", function () {
 			it( "isn't", function () {
 
 				expect( Util.isnt.object( {} ) ).to.not.be.ok
+				expect( Util.isnt.object( [] ) ).to.be.ok
 				expect( Util.isnt.object( 'ola' ) ).to.be.ok
 
 			});
