@@ -1,4 +1,6 @@
-# Util ![test-badge](http://strider.findhit.com/findhit/findhit-util/badge)
+# Util
+
+[![Test Status](http://strider.findhit.com/findhit/findhit-util/badge)](http://strider.findhit.com/findhit/findhit-util) [![Dependency Status](https://david-dm.org/findhit/findhit-util.svg)](https://david-dm.org/findhit/findhit-util)
 
 Util is a library of daily-needed utils for javascript developers.
 
