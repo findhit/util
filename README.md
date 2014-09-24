@@ -138,6 +138,7 @@ var Util = require('findhit-util');
 
 		Util.Array.each() <- Util.Array.forEach()
 		Util.Array.map()
+		Util.Array.empty()
 
 	// String utils
 		// Util.string OR Util.String
