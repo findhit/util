@@ -10,7 +10,7 @@ describe( "Util", function () {
 
 		describe( "array", function () {
 
-			describe( "map", function () {
+			describe( ".map", function () {
 
 				it( "get 3rd value of each array on array", function () {
 					var t, a = [
@@ -28,6 +28,17 @@ describe( "Util", function () {
 
 				});
 
+			});
+
+			describe( ".empty", function () {
+
+				it( "should empty the array", function () {
+					var array = [ 1, 'foo', 'bar', 'lala', 2 ];
+
+					Util.Array.empty( array );
+
+					expect( array ).to.have.length( 0 );
+				});
 
 			});
 
