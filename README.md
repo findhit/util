@@ -23,7 +23,7 @@ Usage
 var Util = require('findhit-util');
 
 // Everyday use
-	
+
 	Util.uniqId()
 	Util.uuid()
 
@@ -207,5 +207,28 @@ var Util = require('findhit-util');
 
 		Util.Object.each() <- Util.Object.forEach()
 		Util.Object.map()
+
+	// RegExp utils
+		// Util.RegExp OR Util.regexp OR Util.Regexp
+
+		Util.RegExp.builder( [ 'alpha', 'numeric', 'spaced' ]) // Return a regex to match alphanumeric-spaced strings
+
+		Util.RegExp.test( 'as876asdf6 sdf as69876', [ 'alpha', 'numeric', 'spaced' ]) // true
+		Util.RegExp.test( 'as876asdf###df as69876', [ 'alpha', 'numeric', 'spaced' ]) // false
+
+		Util.RegExp.match( 'as876asdf6 sdf as69876', [ 'alpha', 'numeric', 'spaced' ]) // Array with matches
+		Util.RegExp.match( 'as876asdf###df as69876', [ 'alpha', 'numeric', 'spaced' ]) // false
+
+		// Now, the most exciting thing arround RegExp, the querifier!!
+		// Imagine that you need, on a clever way to filter strings
+		// Here is the solution: Util.RegExp.querifier()
+
+		var regexp = Util.RegExp.querifier( 'john doe' ); // magical regexp
+
+		Util.RegExp.filter( regexp, [
+			'José Moreira',
+			'John Something Doe',
+			'João Alto',
+		]); // [ 'John Something Doe' ]
 
 ```

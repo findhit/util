@@ -27,6 +27,7 @@ require('./lib/type/array')( Util );
 require('./lib/type/function')( Util );
 require('./lib/type/object')( Util );
 require('./lib/type/string')( Util );
+require('./lib/type/regexp')( Util );
 
 // Export it
 module.exports = Util;
