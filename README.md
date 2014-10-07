@@ -58,7 +58,7 @@ var Util = require('findhit-util');
 		Util.is.String( variable );
 		Util.is.Error( variable );
 		Util.is.Number( variable );
-		Util.is.Json( variable );
+		Util.is.JSON( variable );
 
 		Util.is.true( variable );
 		Util.is.false( variable );
@@ -78,7 +78,7 @@ var Util = require('findhit-util');
 		Util.isnt.String( variable );
 		Util.isnt.Error( variable );
 		Util.isnt.Number( variable );
-		Util.isnt.Json( variable );
+		Util.isnt.JSON( variable );
 
 		Util.isnt.true( variable );
 		Util.isnt.false( variable );
