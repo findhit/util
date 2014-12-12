@@ -118,24 +118,6 @@ describe( "Util", function () {
 
 		});
 
-		describe( "number", function () {
-
-			it( "is", function () {
-
-				expect( Util.is.number( 123 ) ).to.be.ok
-				expect( Util.is.number( {} ) ).to.not.be.ok
-
-			});
-
-			it( "isn't", function () {
-
-				expect( Util.isnt.number( 3.14 ) ).to.not.be.ok
-				expect( Util.isnt.number( {} ) ).to.be.ok
-
-			});
-
-		});
-
 		describe( "true", function () {
 
 			it( "is", function () {
