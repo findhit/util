@@ -159,6 +159,37 @@ describe( "Util", function () {
 
 				});
 
+				describe('from spaced to ...', function () {
+
+					describe( ".fromSpacedToCamel", function () {
+
+						it('hey yo', function () {
+							var str = Util.String.fromSpacedToCamel( 'hey yo' );
+							expect( str ).to.be.equal( 'HeyYo' );
+						});
+
+					});
+
+					describe( ".fromSpacedToUnderscore", function () {	
+
+						it('hey yo', function () {
+							var str = Util.String.fromSpacedToUnderscore( 'hey yo' );
+							expect( str ).to.be.equal( 'hey_yo' );
+						});
+
+					});
+
+					describe( ".fromSpacedToDash", function () {	
+
+						it('hey yo', function () {
+							var str = Util.String.fromSpacedToDash( 'hey yo' );
+							expect( str ).to.be.equal( 'hey-yo' );
+						});
+
+					});
+
+				});
+
 			});
 
 		});
