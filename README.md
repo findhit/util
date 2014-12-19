@@ -170,7 +170,7 @@ var Util = require('findhit-util');
 			// from spaced to ...
 			Util.String.fromSpacedToCamel( 'hey yo' ) // 'HeyYo'
 			Util.String.fromSpacedToUnderscore( 'hey yo' ) // 'hey_yo'
-			Util.String.fromSpacedToDash( 'hey yo' ) // 'Hey-Yo'
+			Util.String.fromSpacedToDash( 'hey yo' ) // 'hey-yo'
 
 	// Function utils
 		// Util.function OR Util.Function
