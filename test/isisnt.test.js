@@ -100,6 +100,24 @@ describe( "Util", function () {
 
 		});
 
+		describe( "RegExp", function () {
+
+			it( "is", function () {
+
+				expect( Util.is.RegExp( /^hello$/i ) ).to.be.ok
+				expect( Util.is.RegExp( {} ) ).to.not.be.ok
+
+			});
+
+			it( "isn't", function () {
+
+				expect( Util.isnt.RegExp( /^hello$/i ) ).to.not.be.ok
+				expect( Util.isnt.RegExp( {} ) ).to.be.ok
+
+			});
+
+		});
+
 		describe( "undefined", function () {
 
 			it( "is", function () {
