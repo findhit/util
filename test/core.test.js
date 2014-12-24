@@ -1,10 +1,10 @@
-var Util = require('../index'),
+var ƒ = require('../index'),
 
 	sinon = require('sinon'),
 	chai = require('chai'),
 	expect = chai.expect;
 
-describe( "Util", function () {
+describe( "ƒ", function () {
 
 	describe( "core", function () {
 
@@ -15,7 +15,7 @@ describe( "Util", function () {
 					b = { foo: 'bar' },
 					t;
 
-				t = Util.extend( a, b );
+				t = ƒ.extend( a, b );
 
 				expect( a.foo ).to.be.equal( 'bar' );
 				expect( t.foo ).to.be.equal( 'bar' );
@@ -28,7 +28,7 @@ describe( "Util", function () {
 					b = { foo: 'bar' },
 					c = { heyhey: 'yoyo' };
 
-				Util.extend( t, a, b, c );
+					ƒ.extend( t, a, b, c );
 
 				expect( a.foo ).to.be.equal( 'boo' );
 				expect( b.foo ).to.be.equal( 'bar' );
@@ -45,17 +45,17 @@ describe( "Util", function () {
 			it( "should return an array when array is given", function () {
 				var t, a = [];
 
-				t = Util.map( a, function ( v ) { return v });
+				t = ƒ.map( a, function ( v ) { return v });
 
-				expect( Util.is.Array( t ) ).to.be.ok;
+				expect( ƒ.is.Array( t ) ).to.be.ok;
 			});
 
 			it( "should return an object when object is given", function () {
 				var t, a = {};
 
-				t = Util.map( a, function ( v ) { return v });
+				t = ƒ.map( a, function ( v ) { return v });
 
-				expect( Util.is.Object( t ) ).to.be.ok;
+				expect( ƒ.is.Object( t ) ).to.be.ok;
 			});
 
 		});
@@ -69,7 +69,7 @@ describe( "Util", function () {
 						7, 8, 9,
 					];
 
-				t = Util.filter( a, function ( num ) { return num % 2 == 0; });
+				t = ƒ.filter( a, function ( num ) { return num % 2 == 0; });
 
 				expect( t ).to.have.length( 4 );
 
@@ -86,7 +86,7 @@ describe( "Util", function () {
 						bar: 'disco'
 					};
 
-				t = Util.filter( a, function ( value ) { return value.match(/a/); });
+				t = ƒ.filter( a, function ( value ) { return value.match(/a/); });
 
 				expect( t ).to.deep.equal({
 					foo: 'bar'
@@ -108,9 +108,9 @@ describe( "Util", function () {
 							'c',
 						];
 
-					t = Util.slice( a, 1 );
+					t = ƒ.slice( a, 1 );
 
-					expect( Util.is.Array( t ) ).to.be.ok;
+					expect( ƒ.is.Array( t ) ).to.be.ok;
 					expect( t ).to.have.length( 2 );
 					expect( t[0] ).to.be.equal( 'b' );
 					expect( t[1] ).to.be.equal( 'c' );
@@ -125,9 +125,9 @@ describe( "Util", function () {
 							'c',
 						];
 
-					t = Util.slice( a, 1, 2 );
+					t = ƒ.slice( a, 1, 2 );
 
-					expect( Util.is.Array( t ) ).to.be.ok;
+					expect( ƒ.is.Array( t ) ).to.be.ok;
 					expect( t ).to.have.length( 1 );
 					expect( t[0] ).to.be.equal( 'b' );
 
@@ -140,9 +140,9 @@ describe( "Util", function () {
 							'c',
 						];
 
-					t = Util.slice( a, -2 );
+					t = ƒ.slice( a, -2 );
 
-					expect( Util.is.Array( t ) ).to.be.ok;
+					expect( ƒ.is.Array( t ) ).to.be.ok;
 					expect( t ).to.have.length( 2 );
 					expect( t[0] ).to.be.equal( 'b' );
 					expect( t[1] ).to.be.equal( 'c' );
@@ -156,9 +156,9 @@ describe( "Util", function () {
 							'c',
 						];
 
-					t = Util.slice( a, -2, -1 );
+					t = ƒ.slice( a, -2, -1 );
 
-					expect( Util.is.Array( t ) ).to.be.ok;
+					expect( ƒ.is.Array( t ) ).to.be.ok;
 					expect( t ).to.have.length( 1 );
 					expect( t[0] ).to.be.equal( 'b' );
 
@@ -171,9 +171,9 @@ describe( "Util", function () {
 				it( "from second element to the end", function () {
 					var t, a = 'abc';
 
-					t = Util.slice( a, 1 );
+					t = ƒ.slice( a, 1 );
 
-					expect( Util.is.String( t ) ).to.be.ok;
+					expect( ƒ.is.String( t ) ).to.be.ok;
 					expect( t ).to.have.length( 2 );
 					expect( t[0] ).to.be.equal( 'b' );
 					expect( t[1] ).to.be.equal( 'c' );
@@ -184,9 +184,9 @@ describe( "Util", function () {
 				it( "from second element to third", function () {
 					var t, a = 'abc';
 
-					t = Util.slice( a, 1, 2 );
+					t = ƒ.slice( a, 1, 2 );
 
-					expect( Util.is.String( t ) ).to.be.ok;
+					expect( ƒ.is.String( t ) ).to.be.ok;
 					expect( t ).to.have.length( 1 );
 					expect( t[0] ).to.be.equal( 'b' );
 
@@ -195,9 +195,9 @@ describe( "Util", function () {
 				it( "from last two to the end", function () {
 					var t, a = 'abc';
 
-					t = Util.slice( a, -2 );
+					t = ƒ.slice( a, -2 );
 
-					expect( Util.is.String( t ) ).to.be.ok;
+					expect( ƒ.is.String( t ) ).to.be.ok;
 					expect( t ).to.have.length( 2 );
 					expect( t[0] ).to.be.equal( 'b' );
 					expect( t[1] ).to.be.equal( 'c' );
@@ -207,9 +207,9 @@ describe( "Util", function () {
 				it( "from last two except last one", function () {
 					var t, a = 'abc';
 
-					t = Util.slice( a, -2, -1 );
+					t = ƒ.slice( a, -2, -1 );
 
-					expect( Util.is.String( t ) ).to.be.ok;
+					expect( ƒ.is.String( t ) ).to.be.ok;
 					expect( t ).to.have.length( 1 );
 					expect( t[0] ).to.be.equal( 'b' );
 
@@ -226,9 +226,9 @@ describe( "Util", function () {
 						third: 'c',
 					};
 
-					t = Util.slice( a, 1 );
+					t = ƒ.slice( a, 1 );
 
-					expect( Util.is.Object( t ) ).to.be.ok;
+					expect( ƒ.is.Object( t ) ).to.be.ok;
 					expect( Object.keys( t ) ).to.have.length( 2 );
 					expect( t.second ).to.be.equal( 'b' );
 					expect( t.third ).to.be.equal( 'c' );
@@ -243,9 +243,9 @@ describe( "Util", function () {
 						third: 'c',
 					};
 
-					t = Util.slice( a, 1, 2 );
+					t = ƒ.slice( a, 1, 2 );
 
-					expect( Util.is.Object( t ) ).to.be.ok;
+					expect( ƒ.is.Object( t ) ).to.be.ok;
 					expect( Object.keys( t ) ).to.have.length( 1 );
 					expect( t.second ).to.be.equal( 'b' );
 
@@ -258,9 +258,9 @@ describe( "Util", function () {
 						third: 'c',
 					};
 
-					t = Util.slice( a, -2 );
+					t = ƒ.slice( a, -2 );
 
-					expect( Util.is.Object( t ) ).to.be.ok;
+					expect( ƒ.is.Object( t ) ).to.be.ok;
 					expect( Object.keys( t ) ).to.have.length( 2 );
 					expect( t.second ).to.be.equal( 'b' );
 					expect( t.third ).to.be.equal( 'c' );
@@ -274,9 +274,9 @@ describe( "Util", function () {
 						third: 'c',
 					};
 
-					t = Util.slice( a, -2, -1 );
+					t = ƒ.slice( a, -2, -1 );
 
-					expect( Util.is.Object( t ) ).to.be.ok;
+					expect( ƒ.is.Object( t ) ).to.be.ok;
 					expect( Object.keys( t ) ).to.have.length( 1 );
 					expect( t.second ).to.be.equal( 'b' );
 

@@ -1,10 +1,10 @@
-var Util = require('../../index'),
+var ƒ = require('../../index'),
 
 	sinon = require('sinon'),
 	chai = require('chai'),
 	expect = chai.expect;
 
-describe( "Util", function () {
+describe( "ƒ", function () {
 
 	describe( "type", function () {
 
@@ -21,7 +21,7 @@ describe( "Util", function () {
 							twitter: '5'
 						};
 
-					t = Util.map( a, function ( v, k ) { return k });
+					t = ƒ.map( a, function ( v, k ) { return k });
 
 					expect( t ).to.deep.equal({
 						findhit: 'findhit',

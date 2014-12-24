@@ -1,10 +1,10 @@
-var Util = require('../../index'),
+var ƒ = require('../../index'),
 
 	sinon = require('sinon'),
 	chai = require('chai'),
 	expect = chai.expect;
 
-describe( "Util", function () {
+describe( "ƒ", function () {
 
 	describe( "type", function () {
 
@@ -13,18 +13,18 @@ describe( "Util", function () {
 			describe( ".trim", function () {
 
 				it( "should trim tabs", function () {
-					expect( Util.String.trim( "			123		" ) ).to.have.length( 3 );
-					expect( Util.String.trim( "			1 2 3		" ) ).to.have.length( 5 );
+					expect( ƒ.String.trim( "			123		" ) ).to.have.length( 3 );
+					expect( ƒ.String.trim( "			1 2 3		" ) ).to.have.length( 5 );
 				});
 
 				it( "should trim spaces", function () {
-					expect( Util.String.trim( "       123         " ) ).to.have.length( 3 );
-					expect( Util.String.trim( "       1 2 3         " ) ).to.have.length( 5 );
+					expect( ƒ.String.trim( "       123         " ) ).to.have.length( 3 );
+					expect( ƒ.String.trim( "       1 2 3         " ) ).to.have.length( 5 );
 				});
 
 				it( "should trim tabs and spaces", function () {
-					expect( Util.String.trim( "   		    123         " ) ).to.have.length( 3 );
-					expect( Util.String.trim( "  	     1 2 3    	  	   " ) ).to.have.length( 5 );
+					expect( ƒ.String.trim( "   		    123         " ) ).to.have.length( 3 );
+					expect( ƒ.String.trim( "  	     1 2 3    	  	   " ) ).to.have.length( 5 );
 				});
 
 			});
@@ -32,18 +32,18 @@ describe( "Util", function () {
 			describe( ".splitWords", function () {
 
 				it( "should split the simplest phrase", function () {
-					expect( Util.String.splitWords( "one two three" ) ).to.have.length( 3 );
+					expect( ƒ.String.splitWords( "one two three" ) ).to.have.length( 3 );
 				});
 
 				it( "should ignore commas", function () {
-					expect( Util.String.splitWords( "one , two , three" ) ).to.have.length( 3 );
-					expect( Util.String.splitWords( "one, two, three" ) ).to.have.length( 3 );
-					expect( Util.String.splitWords( "one ,two ,three" ) ).to.have.length( 3 );
-					expect( Util.String.splitWords( "one,two,three" ) ).to.have.length( 3 );
+					expect( ƒ.String.splitWords( "one , two , three" ) ).to.have.length( 3 );
+					expect( ƒ.String.splitWords( "one, two, three" ) ).to.have.length( 3 );
+					expect( ƒ.String.splitWords( "one ,two ,three" ) ).to.have.length( 3 );
+					expect( ƒ.String.splitWords( "one,two,three" ) ).to.have.length( 3 );
 				});
 
 				it( "should split the akwardest phrase", function () {
-					expect( Util.String.splitWords( "  	 Word1 		another-fake		Other  	" ) ).to.have.length( 3 );
+					expect( ƒ.String.splitWords( "  	 Word1 		another-fake		Other  	" ) ).to.have.length( 3 );
 				});
 
 			});
@@ -51,7 +51,7 @@ describe( "Util", function () {
 			describe( ".capitalize", function () {
 
 				it( "should capitalize the string", function () {
-					var str = Util.String.capitalize( 'heyyo' );
+					var str = ƒ.String.capitalize( 'heyyo' );
 					expect( str ).to.equal( 'Heyyo' );
 				});
 			});
@@ -59,7 +59,7 @@ describe( "Util", function () {
 			describe( ".decapitalize", function () {
 
 				it( "should decapitalize the string", function () {
-					var str = Util.String.decapitalize( 'Heyyo' );
+					var str = ƒ.String.decapitalize( 'Heyyo' );
 					expect( str ).to.equal( 'heyyo' );
 				});
 			});
@@ -71,25 +71,25 @@ describe( "Util", function () {
 					describe( ".fromCamelToUnderscore", function () {
 
 						it('HeyYo', function () {
-							var str = Util.String.fromCamelToUnderscore( 'HeyYo' );
+							var str = ƒ.String.fromCamelToUnderscore( 'HeyYo' );
 							expect( str ).to.be.equal( 'hey_yo' );
 						});
 
 					});
 
-					describe( ".fromCamelToDash", function () {	
+					describe( ".fromCamelToDash", function () {
 
 						it('HeyYo', function () {
-							var str = Util.String.fromCamelToDash( 'HeyYo' );
+							var str = ƒ.String.fromCamelToDash( 'HeyYo' );
 							expect( str ).to.be.equal( 'hey-yo' );
 						});
 
 					});
 
-					describe( ".fromCamelToSpaced", function () {	
+					describe( ".fromCamelToSpaced", function () {
 
 						it('HeyYo', function () {
-							var str = Util.String.fromCamelToSpaced( 'HeyYo' );
+							var str = ƒ.String.fromCamelToSpaced( 'HeyYo' );
 							expect( str ).to.be.equal( 'Hey Yo' );
 						});
 
@@ -102,25 +102,25 @@ describe( "Util", function () {
 					describe( ".fromUnderscoreToCamel", function () {
 
 						it('hey_yo', function () {
-							var str = Util.String.fromUnderscoreToCamel( 'hey_yo' );
+							var str = ƒ.String.fromUnderscoreToCamel( 'hey_yo' );
 							expect( str ).to.be.equal( 'HeyYo' );
 						});
 
 					});
 
-					describe( ".fromUnderscoreToDash", function () {	
+					describe( ".fromUnderscoreToDash", function () {
 
 						it('hey_yo', function () {
-							var str = Util.String.fromUnderscoreToDash( 'hey_yo' );
+							var str = ƒ.String.fromUnderscoreToDash( 'hey_yo' );
 							expect( str ).to.be.equal( 'hey-yo' );
 						});
 
 					});
 
-					describe( ".fromUnderscoreToSpaced", function () {	
+					describe( ".fromUnderscoreToSpaced", function () {
 
 						it('hey_yo', function () {
-							var str = Util.String.fromUnderscoreToSpaced( 'hey_yo' );
+							var str = ƒ.String.fromUnderscoreToSpaced( 'hey_yo' );
 							expect( str ).to.be.equal( 'Hey Yo' );
 						});
 
@@ -133,25 +133,25 @@ describe( "Util", function () {
 					describe( ".fromDashToCamel", function () {
 
 						it('hey-yo', function () {
-							var str = Util.String.fromDashToCamel( 'hey-yo' );
+							var str = ƒ.String.fromDashToCamel( 'hey-yo' );
 							expect( str ).to.be.equal( 'HeyYo' );
 						});
 
 					});
 
-					describe( ".fromDashToUnderscore", function () {	
+					describe( ".fromDashToUnderscore", function () {
 
 						it('hey-yo', function () {
-							var str = Util.String.fromDashToUnderscore( 'hey-yo' );
+							var str = ƒ.String.fromDashToUnderscore( 'hey-yo' );
 							expect( str ).to.be.equal( 'hey_yo' );
 						});
 
 					});
 
-					describe( ".fromDashToSpaced", function () {	
+					describe( ".fromDashToSpaced", function () {
 
 						it('hey-yo', function () {
-							var str = Util.String.fromDashToSpaced( 'hey-yo' );
+							var str = ƒ.String.fromDashToSpaced( 'hey-yo' );
 							expect( str ).to.be.equal( 'Hey Yo' );
 						});
 

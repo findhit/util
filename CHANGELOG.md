@@ -1,5 +1,8 @@
 ## Upcoming
 
+## 0.2.4
+* Decided internally to standartize variable name from `Util` to `ƒ`
+
 ## 0.2.1
 + Util.RegExp.*
 

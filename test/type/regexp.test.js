@@ -1,10 +1,10 @@
-var Util = require('../../index'),
+var ƒ = require('../../index'),
 
     sinon = require('sinon'),
     chai = require('chai'),
     expect = chai.expect;
 
-describe( "Util", function () {
+describe( "ƒ", function () {
 
     describe( "RegExp", function () {
 
@@ -12,7 +12,7 @@ describe( "Util", function () {
 
             describe( "alphanumeric", function () {
                 before(function () {
-                    this.regexp = Util.RegExp.builder( [ 'alpha', 'numeric' ] );
+                    this.regexp = ƒ.RegExp.builder( [ 'alpha', 'numeric' ] );
                 });
 
                 it( "matching", function () {
@@ -25,7 +25,7 @@ describe( "Util", function () {
 
             describe( "spaced alphanumeric", function () {
                 before(function () {
-                    this.regexp = Util.RegExp.builder( [ 'alpha', 'numeric', 'spaced' ] );
+                    this.regexp = ƒ.RegExp.builder( [ 'alpha', 'numeric', 'spaced' ] );
                 });
 
                 it( "matching", function () {
@@ -41,12 +41,12 @@ describe( "Util", function () {
         describe( "test", function () {
 
             it( "matching", function () {
-                var res = Util.RegExp.test( "dsgiuysg7ysgdiustd87werkjhgqwer23512", [ 'alpha', 'numeric' ] );
+                var res = ƒ.RegExp.test( "dsgiuysg7ysgdiustd87werkjhgqwer23512", [ 'alpha', 'numeric' ] );
                 expect( res ).to.be.ok;
             });
 
             it( "non-matching", function () {
-                var res = Util.RegExp.test( "dsgiu ysg7ysgdiustd8 7werkjhgqw er23512", [ 'alpha', 'numeric' ] );
+                var res = ƒ.RegExp.test( "dsgiu ysg7ysgdiustd8 7werkjhgqw er23512", [ 'alpha', 'numeric' ] );
                 expect( res ).to.not.be.ok;
             });
 
@@ -55,12 +55,12 @@ describe( "Util", function () {
         describe( "match", function () {
 
             it( "matching", function () {
-                var res = Util.RegExp.match( "dsgiuysg7ysgdiustd87werkjhgqwer23512", [ 'alpha', 'numeric' ] );
+                var res = ƒ.RegExp.match( "dsgiuysg7ysgdiustd87werkjhgqwer23512", [ 'alpha', 'numeric' ] );
                 expect( res ).to.be.ok;
             });
 
             it( "non-matching", function () {
-                var res = Util.RegExp.match( "dsgiu ysg7ysgdiustd8 7werkjhgqw er23512", [ 'alpha', 'numeric' ] );
+                var res = ƒ.RegExp.match( "dsgiu ysg7ysgdiustd8 7werkjhgqw er23512", [ 'alpha', 'numeric' ] );
                 expect( res ).to.not.be.ok;
             });
 
@@ -86,8 +86,8 @@ describe( "Util", function () {
 
             it( "check 'jose' matches we have on our names array", function () {
 
-                var regexp = Util.RegExp.querify( 'jose' ),
-                    results = Util.RegExp.filter( regexp, this.names );
+                var regexp = ƒ.RegExp.querify( 'jose' ),
+                    results = ƒ.RegExp.filter( regexp, this.names );
 
                 expect( results ).to.deep.equal([
                     'José Pereira',
@@ -98,8 +98,8 @@ describe( "Util", function () {
 
             it( "check 'al' matches we have on our names array", function () {
 
-                var regexp = Util.RegExp.querify( 'al' ),
-                    results = Util.RegExp.filter( regexp, this.names );
+                var regexp = ƒ.RegExp.querify( 'al' ),
+                    results = ƒ.RegExp.filter( regexp, this.names );
 
                 expect( results ).to.deep.equal([
                     'João Alto',
@@ -112,8 +112,8 @@ describe( "Util", function () {
 
             it( "check 'asa uno' matches we have on our names array", function () {
 
-                var regexp = Util.RegExp.querify( 'asa uno' ),
-                    results = Util.RegExp.filter( regexp, this.names );
+                var regexp = ƒ.RegExp.querify( 'asa uno' ),
+                    results = ƒ.RegExp.filter( regexp, this.names );
 
                 expect( results ).to.deep.equal([
                     'Bruno Casanova',

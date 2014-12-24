@@ -1,10 +1,10 @@
-var Util = require('../../index'),
+var ƒ = require('../../index'),
 
 	sinon = require('sinon'),
 	chai = require('chai'),
 	expect = chai.expect;
 
-describe( "Util", function () {
+describe( "ƒ", function () {
 
 	describe( "type", function () {
 
@@ -19,7 +19,7 @@ describe( "Util", function () {
 							[ 7, 8, 9 ],
 						];
 
-					t = Util.map( a, function ( v ) { return v[ 2 ] });
+					t = ƒ.map( a, function ( v ) { return v[ 2 ] });
 
 					expect( t ).to.have.length( 3 );
 					expect( t[0] ).to.be.equal( 3 );
@@ -35,7 +35,7 @@ describe( "Util", function () {
 				it( "should empty the array", function () {
 					var array = [ 1, 'foo', 'bar', 'lala', 2 ];
 
-					Util.Array.empty( array );
+					ƒ.Array.empty( array );
 
 					expect( array ).to.have.length( 0 );
 				});

@@ -1,6 +1,6 @@
 /**
   The entry point.
-  @module Util
+  @module ƒ
 **/
 'use strict';
 
@@ -8,28 +8,30 @@
  * To use it, you just need to import it:
  *
  * ```js
+ * var ƒ = require('findhit-util');
+ * // OR
  * var Util = require('findhit-util');
  * ```
  *
  *
- * @class Util
+ * @class ƒ
  */
 
-var Util = {};
+var ƒ = {};
 
-require('./lib/core')( Util );
-require('./lib/isisnt')( Util );
-require('./lib/from')( Util );
-require('./lib/to')( Util );
+require('./lib/core')( ƒ );
+require('./lib/isisnt')( ƒ );
+require('./lib/from')( ƒ );
+require('./lib/to')( ƒ );
 
 // Load utils by type
-require('./lib/type/array')( Util );
-require('./lib/type/function')( Util );
-require('./lib/type/object')( Util );
-require('./lib/type/string')( Util );
-require('./lib/type/regexp')( Util );
+require('./lib/type/array')( ƒ );
+require('./lib/type/function')( ƒ );
+require('./lib/type/object')( ƒ );
+require('./lib/type/string')( ƒ );
+require('./lib/type/regexp')( ƒ );
 
 // Export it
-module.exports = Util;
+module.exports = ƒ;
 
 // TODO: AMDify
