@@ -1,6 +1,9 @@
 ## Upcoming
 * Decided internally to standartize variable name from `Util` to `ƒ`
 
+## 0.2.5
+- Fix variable on `Util.String.smartTrim`
+
 ## 0.2.4
 - Added `Util.String.smartTrim`
 
