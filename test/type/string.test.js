@@ -48,6 +48,46 @@ describe( "ƒ", function () {
 
 			});
 
+			describe( ".toHtml", function () {
+
+				it( 'should convert breaklines to <br />', function () {
+					expect( Util.String.toHtml( 'Should convert \n to <br />' ) ).to.be.equal( 'Should convert <br /> to <br />' );
+				});
+
+				it( 'should convert &quot; to "', function () {
+					expect( Util.String.toHtml( 'Should convert &quot; to "' ) ).to.be.equal( 'Should convert " to "' );
+				});
+
+				it( 'should convert &lt; to <', function () {
+					expect( Util.String.toHtml( 'Should convert &lt; to <' ) ).to.be.equal( 'Should convert < to <' );
+				});
+
+				it( 'should convert &gt; to >', function () {
+					expect( Util.String.toHtml( 'Should convert &gt; to >' ) ).to.be.equal( 'Should convert > to >' );
+				});
+
+			});
+
+			describe( ".toText", function () {
+
+				it( 'should convert <br /> to breaklines', function () {
+					expect( Util.String.toText( 'Should convert <br /> to \n' ) ).to.be.equal( 'Should convert \n to \n' );
+				});
+
+				it( 'should convert " to &quot;', function () {
+					expect( Util.String.toText( 'Should convert " to &quot;' ) ).to.be.equal( 'Should convert &quot; to &quot;' );
+				});
+
+				it( 'should convert < to &lt;', function () {
+					expect( Util.String.toText( 'Should convert < to &lt;' ) ).to.be.equal( 'Should convert &lt; to &lt;' );
+				});
+
+				it( 'should convert > to &gt;', function () {
+					expect( Util.String.toText( 'Should convert > to &gt;' ) ).to.be.equal( 'Should convert &gt; to &gt;' );
+				});
+
+			});
+
 			describe( ".capitalize", function () {
 
 				it( "should capitalize the string", function () {
