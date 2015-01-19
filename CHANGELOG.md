@@ -1,5 +1,7 @@
 ## Upcoming
-* Decided internally to standartize variable name from `Util` to `ƒ`
+- Decided internally to standartize variable name from `Util` to `ƒ`
+- Added `Util.RegExp.snippets.subject_email` for matching strings like:
+`Gabriel Conceição <gabriel@findhit.com>`
 
 ## 0.2.5
 - Fix variable on `Util.String.smartTrim`
