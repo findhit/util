@@ -1,4 +1,4 @@
-var ƒ = require('../../index'),
+var ƒ = require('../../../index'),
 
     sinon = require('sinon'),
     chai = require('chai'),
