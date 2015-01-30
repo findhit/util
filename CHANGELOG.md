@@ -1,4 +1,5 @@
 ## Upcoming
+- Added `Util.Date.format` enables Data formatation
 
 ## 0.2.6
 - Decided internally to standartize variable name from `Util` to `ƒ`
