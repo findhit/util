@@ -30,6 +30,7 @@ require('./lib/type/function')( ƒ );
 require('./lib/type/object')( ƒ );
 require('./lib/type/string')( ƒ );
 require('./lib/type/regexp')( ƒ );
+require('./lib/type/date')( ƒ );
 
 // Export it
 module.exports = ƒ;
