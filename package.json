@@ -19,10 +19,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/findhit/findhit-util.git"
+    "url": "https://github.com/findhit/util.git"
   },
   "bugs": {
-    "url": "https://github.com/findhit/findhit-util/issues"
+    "url": "https://github.com/findhit/util/issues"
   },
   "dependencies": {},
   "devDependencies": {
