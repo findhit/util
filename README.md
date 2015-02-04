@@ -6,6 +6,19 @@
 
 Used on our own libraries, and maybe on yours, no one wants to reinvent the wheel everytime they need it.
 
+Why ƒ?
+------
+
+- Represent mathematical function!
+- Was used on older Apple systems to represent a folder.
+- **ƒ** is easier to write: (at least at Mac OS)
+  - Mac - Alt + Shift + f
+  - Windows - Alt + 159
+  - Linux - CHANGEME :D
+
+If you don't want to use **ƒ** as variable name, we advise you to use `Util` (capitalized, so you won't have problems in case you use nodejs's `util`)
+
+
 Instalation
 -----------
 
@@ -51,7 +64,7 @@ var ƒ = require( 'findhit-util' );
 
 	ƒ.is.instanceof( Promise, variable );
 
-		// Default registered Classes
+		// Default registered Constructors
 
 		ƒ.is.Function( variable );
 		ƒ.is.Object( variable );
@@ -71,7 +84,7 @@ var ƒ = require( 'findhit-util' );
 
 	ƒ.isnt.instanceof( Promise, promise );
 
-		// Default registered Classes
+		// Default registered Constructors
 
 		ƒ.isnt.Function( variable );
 		ƒ.isnt.Object( variable );
@@ -86,10 +99,11 @@ var ƒ = require( 'findhit-util' );
 		ƒ.isnt.undefined( variable );
 		ƒ.isnt.null( variable );
 
-	// Custom registers
+	// Custom constructor register
 	// This is great, not just to use on your app, but to be used also by who uses your app
 
-		// We use on `findhit-promise` this lib, and we have registered it on IsIsnt like this:
+		// You could easily register your plugin's constructor on ƒ
+		// We use this lib on `findhit-promise`, and we have registered it on IsIsnt like this:
 		ƒ.isisnt.register( Promise, [ 'Promise', 'promise' ] );
 
 		// Now, if someone uses `findhit-promise` and also `findhit-util` can check without
