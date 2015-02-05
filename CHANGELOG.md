@@ -1,4 +1,6 @@
 ## Upcoming
+
+## 0.2.7
 - Added `Util.Date.format` enables Data formatation
 
 ## 0.2.6
