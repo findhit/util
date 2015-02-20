@@ -51,19 +51,19 @@ describe( "ƒ", function () {
 			describe( ".toHtml", function () {
 
 				it( 'should convert breaklines to <br />', function () {
-					expect( f.String.toHtml( 'Should convert \n to <br />' ) ).to.be.equal( 'Should convert <br /> to <br />' );
+					expect( ƒ.String.toHtml( 'Should convert \n to <br />' ) ).to.be.equal( 'Should convert <br /> to <br />' );
 				});
 
 				it( 'should convert &quot; to "', function () {
-					expect( f.String.toHtml( 'Should convert &quot; to "' ) ).to.be.equal( 'Should convert " to "' );
+					expect( ƒ.String.toHtml( 'Should convert &quot; to "' ) ).to.be.equal( 'Should convert " to "' );
 				});
 
 				it( 'should convert &lt; to <', function () {
-					expect( f.String.toHtml( 'Should convert &lt; to <' ) ).to.be.equal( 'Should convert < to <' );
+					expect( ƒ.String.toHtml( 'Should convert &lt; to <' ) ).to.be.equal( 'Should convert < to <' );
 				});
 
 				it( 'should convert &gt; to >', function () {
-					expect( f.String.toHtml( 'Should convert &gt; to >' ) ).to.be.equal( 'Should convert > to >' );
+					expect( ƒ.String.toHtml( 'Should convert &gt; to >' ) ).to.be.equal( 'Should convert > to >' );
 				});
 
 			});
@@ -71,19 +71,19 @@ describe( "ƒ", function () {
 			describe( ".toText", function () {
 
 				it( 'should convert <br /> to breaklines', function () {
-					expect( f.String.toText( 'Should convert <br /> to \n' ) ).to.be.equal( 'Should convert \n to \n' );
+					expect( ƒ.String.toText( 'Should convert <br /> to \n' ) ).to.be.equal( 'Should convert \n to \n' );
 				});
 
 				it( 'should convert " to &quot;', function () {
-					expect( f.String.toText( 'Should convert " to &quot;' ) ).to.be.equal( 'Should convert &quot; to &quot;' );
+					expect( ƒ.String.toText( 'Should convert " to &quot;' ) ).to.be.equal( 'Should convert &quot; to &quot;' );
 				});
 
 				it( 'should convert < to &lt;', function () {
-					expect( f.String.toText( 'Should convert < to &lt;' ) ).to.be.equal( 'Should convert &lt; to &lt;' );
+					expect( ƒ.String.toText( 'Should convert < to &lt;' ) ).to.be.equal( 'Should convert &lt; to &lt;' );
 				});
 
 				it( 'should convert > to &gt;', function () {
-					expect( f.String.toText( 'Should convert > to &gt;' ) ).to.be.equal( 'Should convert &gt; to &gt;' );
+					expect( ƒ.String.toText( 'Should convert > to &gt;' ) ).to.be.equal( 'Should convert &gt; to &gt;' );
 				});
 
 			});
