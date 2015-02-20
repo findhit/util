@@ -1,5 +1,8 @@
 ## Upcoming
 
+## 0.2.8
+- Added `Util.String.toHtml` and `Util.String.toText` functions
+
 ## 0.2.7
 - Added `Util.Date.format` enables Data formatation
 
