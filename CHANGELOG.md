@@ -1,4 +1,5 @@
 ## Upcoming
+- Added `breaklines` snippet. [ #39 ]( https://github.com/findhit/util/pull/39 )
 
 ## 0.2.8
 - Added `Util.String.toHtml` and `Util.String.toText` functions
