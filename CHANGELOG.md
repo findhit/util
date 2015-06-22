@@ -1,4 +1,6 @@
 ## Upcoming
+
+## 0.2.9
 - Added `breaklines` snippet. [ #39 ]( https://github.com/findhit/util/pull/39 )
 
 ## 0.2.8
