@@ -14,7 +14,7 @@ Why ƒ?
 - **ƒ** is easier to write: (at least at Mac OS)
   - Mac - Alt + Shift + f
   - Windows - Alt + 159
-  - Linux - CHANGEME :D
+  - Linux - Ctrl + Shift + U, 192, Enter
 
 If you don't want to use **ƒ** as variable name, we advise you to use `Util` (capitalized, so you won't have problems in case you use nodejs's `util`)
 
